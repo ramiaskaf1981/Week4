@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ .wrapper {
+    width: 1112px;
+    margin: 0 auto;
+} 
+
+
+.logo {
+    margin: 0;
+    line-height: 32px;
+    text-transform: uppercase; 
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.logo a {
+    text-decoration: none;
+    color: #555252;
+    font-family: "Roboto";
+    font-size: 30px;
+}
+.logo::first-letter {
+    color: rgb(26, 188, 156);
+    font-weight: bold;
+}
+.menu {
+    padding-top: 44px;
+    padding-bottom: 32px;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 11px;
+    display: inline-block;
+}
+.menu-list li {
+    margin-right: 30px;
+}
+.menu-list-items a {
+    text-decoration: none;
+    color: rgb(81, 81, 81);
+}
+.menu-list-items a:hover {
+    color: rgb(26, 188, 156);
+} 
