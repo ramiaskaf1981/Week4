@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Products</title>
+    <style>
+        .product {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Product List</h1>
+
+<!-- Dropdown to select sorting criteria -->
+<label for="sortCriteria">Sort by:</label>
+<select id="sortCriteria" onchange="sortProducts()">
+    <option value="price">Price</option>
+    <option value="name">Name</option>
+</select>
+
+<!-- Container for displaying products -->
+<div id="productList">
+    <!-- Product items will be added here dynamically -->
+</div>
+
+<script>
+// Sample product data
+const products = [
+    { name: "Laptop", price: 1200 },
+    { name: "Headphones", price: 100 },
+    { name: "Smartphone", price: 800 },
+    { name: "Keyboard", price: 50 },
+    { name: "Monitor", price: 300 }
+];
+
+// Function to display products on the page
+function displayProducts(products) {
+    const productList = document.getElementById("productList");
+    productList.innerHTML = ""; // Clear existing content
+
+    products.forEach(product => {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+        productDiv.innerText = `${product.name} - $${product.price}`;
+        productList.appendChild(productDiv);
+    });
+}
+
+// Sorting function based on selected criteria
+function sortProducts() {
+    const criteria = document.getElementById("sortCriteria").value;
+
+    const sortedProducts = [...products].sort((a, b) => {
+        if (criteria === "price") {
+            return a.price - b.price;
+        } else if (criteria === "name") {
+            return a.name.localeCompare(b.name);
+        }
+    });
+
+    displayProducts(sortedProducts);
+}
+
+// Initial display of products
+displayProducts(products);
+</script>
+
+</body>
+</html>
