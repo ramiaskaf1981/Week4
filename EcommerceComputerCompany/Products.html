@@ -42,7 +42,7 @@
       <option value="name-desc">Name: Z to A</option>
     </select>
     <a href="ShoppingCart.html">
-      <button>Go to Shopping Cart </button>
+      <button class="openShopping">Go to Shopping Cart </button>
   </a> 
   </div>
 
@@ -53,8 +53,8 @@
     <div class="products-grid" id="products-grid">
       <!-- Product 1 -->
       <div class="product-card" data-price="19.99">
-        <img src="product1.jpg" alt="Product 1">
-        <h3>Product 1</h3>
+        <img src="images/BTTWSSMARTB-01-MAIN-HR.jpg" alt="Product 1">
+        <h3>Wireless Headphones</h3>
         <p class="price">$19.99</p>
         <button class="add-to-cart">Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(1)">Show Details</button>
@@ -66,8 +66,9 @@
 
       <!-- Product 2 -->
       <div class="product-card" data-price="29.99">
-        <img src="product2.jpg" alt="Product 2">
-        <h3>Product 2</h3>
+        <img src="images/ice-watch-damen-smartwatch-smart-two-rosa-rosegoldfarben-eckig-mit-silikonband-20-023067-37601-0.jpg" alt="Product 2">
+        <h3>Smart Watch
+        </h3>
         <p class="price">$29.99</p>
         <button class="add-to-cart">Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(2)">Show Details</button>
@@ -80,8 +81,8 @@
       <!-- Product 3 -->
       <div class="product-card" data-price="39.99">
         <img src="https://www.bhphotovideo.com/images/images2500x2500/lenovo_20t8002aus_tp_e15_g2_ryzen_1595848.jpg" alt="Product 3">
-        <h3>Product 3</h3>
-        <p class="price">$39.99</p>
+        <h3>Lenovo Thinkpad</h3>
+        <p class="price">$339.99</p>
         <button class="add-to-cart">Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(3)">Show Details</button>
         <div class="product-details" id="details-3">
@@ -92,8 +93,8 @@
 
       <!-- Product 4 -->
       <div class="product-card" data-price="49.99">
-        <img src="product4.jpg" alt="Product 4">
-        <h3>Product 4</h3>
+        <img src="images/rockster-ng-front-angled-wheels-v2-1300x1300x72.jpg" alt="Product 4">
+        <h3>Bluetooth Speaker</h3>
         <p class="price">$49.99</p>
         <button class="add-to-cart" >Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(4)">Show Details</button>
@@ -105,8 +106,8 @@
 
       <!-- Product 5 -->
       <div class="product-card" data-price="59.99">
-        <img src="product5.jpg" alt="Product 5">
-        <h3>Product 5</h3>
+        <img src="images/71q4BgtKytL._AC_SX679_.jpg" alt="Product 5">
+        <h3>Digital Camera</h3>
         <p class="price">$59.99</p>
         <button class="add-to-cart" >Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(5)">Show Details</button>
@@ -118,10 +119,10 @@
 
       <!-- Product 6 -->
       <div class="product-card" data-price="69.99">
-        <img src="product6.jpg" alt="Product 6">
+        <img src="images/aceraspirea515-54gfeatured-1000x563.jpg" alt="Product 6">
         <h3>Product 6</h3>
         <p class="price">$69.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart" data-name="Product 3" data-price="30" onclick="updateCart()">Add to Cart</button>
         <button class="show-details" onclick="toggleDetails(6)">Show Details</button>
         <div class="product-details" id="details-6">
           <p>Description: A wonderful product 6.</p>
@@ -132,13 +133,19 @@
   </main>
 
   <!-- Footer Section -->
-  <footer>
+   <!-- Footer Section -->
+   <footer>
     <div class="container">
-      <p>&copy; 2024 My E-Commerce Store | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+            <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 My E-Commerce Store. All rights reserved.</p>
     </div>
-  </footer>
-
+</footer>
  
   <script src="Ecom.js"></script>
+
 </body>
 </html>
