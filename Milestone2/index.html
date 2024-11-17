@@ -9,6 +9,15 @@
 <body>
   <div class="container">
     <h1>Our Products</h1>
+    <!-- Sorting dropdown -->
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="name-asc">Name: A to Z</option>
+      <option value="name-desc">Name: Z to A</option>
+    </select>
+    
     <div id="product-list" class="product-list"></div>
   </div>
   

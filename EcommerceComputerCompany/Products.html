@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Page</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    /* Additional CSS to hide details by default */
+    .product-details {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .sort-container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>My E-Commerce Store</h1>
+      <nav>
+        <a href="ecommerce.html">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sorting Section -->
+<div class="sort-container">
+    <label for="sort">Sort by: </label>
+    <select id="sort" onchange="sortProducts()">
+      <option value="low-to-high">Price: Low to High</option>
+      <option value="high-to-low">Price: High to Low</option>
+      <option value="name-asc">Name: A to Z</option>
+      <option value="name-desc">Name: Z to A</option>
+    </select>
+    <a href="ShoppingCart.html">
+      <button>Go to Shopping Cart </button>
+  </a> 
+  </div>
+
+
+  <!-- Products Section -->
+  <main class="products-section">
+    <h2>Our Products</h2>
+    <div class="products-grid" id="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card" data-price="19.99">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p class="price">$19.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(1)">Show Details</button>
+        <div class="product-details" id="details-1">
+          <p>Description: A wonderful product 1.</p>
+          <p>Specifications: Color - Red, Size - Medium.</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-price="29.99">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p class="price">$29.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(2)">Show Details</button>
+        <div class="product-details" id="details-2">
+          <p>Description: A wonderful product 2.</p>
+          <p>Specifications: Color - Blue, Size - Large.</p>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-price="39.99">
+        <img src="https://www.bhphotovideo.com/images/images2500x2500/lenovo_20t8002aus_tp_e15_g2_ryzen_1595848.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p class="price">$39.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(3)">Show Details</button>
+        <div class="product-details" id="details-3">
+          <p>Description: A wonderful product 3.</p>
+          <p>Specifications: Color - Green, Size - Small.</p>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-price="49.99">
+        <img src="product4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p class="price">$49.99</p>
+        <button class="add-to-cart" >Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(4)">Show Details</button>
+        <div class="product-details" id="details-4">
+          <p>Description: A wonderful product 4.</p>
+          <p>Specifications: Color - Yellow, Size - Medium.</p>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card" data-price="59.99">
+        <img src="product5.jpg" alt="Product 5">
+        <h3>Product 5</h3>
+        <p class="price">$59.99</p>
+        <button class="add-to-cart" >Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(5)">Show Details</button>
+        <div class="product-details" id="details-5">
+          <p>Description: A wonderful product 5.</p>
+          <p>Specifications: Color - Black, Size - Large.</p>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card" data-price="69.99">
+        <img src="product6.jpg" alt="Product 6">
+        <h3>Product 6</h3>
+        <p class="price">$69.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="show-details" onclick="toggleDetails(6)">Show Details</button>
+        <div class="product-details" id="details-6">
+          <p>Description: A wonderful product 6.</p>
+          <p>Specifications: Color - White, Size - Extra Large.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My E-Commerce Store | All Rights Reserved</p>
+    </div>
+  </footer>
+
+ 
+  <script src="Ecom.js"></script>
+</body>
+</html>

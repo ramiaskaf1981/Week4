@@ -55,6 +55,43 @@ nav a:hover {
   color: var(--secondary-color);
   text-decoration: underline;
 }
+/* Styling for the Sorting Section */
+.sort-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.sort-container label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.sort-container select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.sort-container select:hover {
+  border-color: #d35400;
+  background-color: #f4f4f4;
+}
+
+.sort-container select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background-color: #fff;
+}
+
 
 /* Products Section */
 .products-section {
