@@ -1,6 +1,6 @@
 
 
-// JavaScript function to toggle product details visibility
+// toggle product details visibility
 function toggleDetails(productId) {
   const details = document.getElementById(`details-${productId}`);
   if (details.style.display === "none" || details.style.display === "") {
@@ -10,7 +10,7 @@ function toggleDetails(productId) {
   }
 }
 
-// JavaScript function to sort products
+//  sort products
 
 function sortProducts() {
     const sortOption = document.getElementById("sort").value;
@@ -38,7 +38,7 @@ function sortProducts() {
 
   //........................................
   // Get references to DOM elements
-const cartItemsList = document.getElementById("cart-items");
+/*const cartItemsList = document.getElementById("cart-items");
 const totalElement = document.getElementById("total");
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
@@ -76,4 +76,18 @@ addToCartButtons.forEach(button => {
         // Update the cart display
         updateCart();
     });
+});
+*/
+// JavaScript to handle adding items to cart
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    // Get the current count of items in the cart
+    let cartCount = parseInt(document.getElementById('cart-count').innerText);
+    
+    // Increment the cart count
+    cartCount++;
+    
+    // Update the cart count in the DOM
+    document.getElementById('cart-count').innerText = cartCount;
+  });
 });

@@ -4,36 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
-  <link rel="stylesheet" href="stylesCart.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-  <div class="container">
-    <h1> Shopping Cart</h1>
-    <div class="shop-items">
-      <div class="item">
-        <h2>Item 1</h2>
-        <p>$10</p>
-        <button class="add-to-cart" data-name="" data-price="10">Add to Cart</button>
-      </div>
-      <div class="item">
-        <h2>Item 2</h2>
-        <p>$20</p>
-        <button class="add-to-cart" data-name="Item 2" data-price="20">Add to Cart</button>
-      </div>
-      <div class="item">
-        <h2>Item 3</h2>
-        <p>$15</p>
-        <button class="add-to-cart" data-name="Item 3" data-price="15">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="cart">
-      <h2>Your Cart</h2>
-      <ul class="cart-items"></ul>
-      <p class="total-price">Total: $<span id="total">0</span></p>
-    </div>
+  <!--  
+  <div class="product">
+    <h2>Product 1</h2>
+    <p>Price: $10.00</p>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+  
+  <div class="product">
+    <h2>Product 2</h2>
+    <p>Price: $20.00</p>
+    <button class="add-to-cart-btn">Add to Cart</button>
   </div>
 
-  <script src="script.js"></script>
+  <div class="product">
+    <h2>Product 3</h2>
+    <p>Price: $30.00</p>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div> -->
+
+  <div class="cart-summary">
+    <p>Items in Cart: <span id="cart-count">0</span></p>
+  </div>
+
+  <script src="Cart.js"></script>
 </body>
 </html>

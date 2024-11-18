@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+        .cart {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .cart-item {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shopping Cart Example</h1>
+    <div id="items">
+        <!-- List of items to add to cart -->
+        <div class="item">
+            <h3>Item 1</h3>
+            <p>$10</p>
+            <button onclick="addToCart('Item 1', 10)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+            <p>$15</p>
+            <button onclick="addToCart('Item 2', 15)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+            <p>$20</p>
+            <button onclick="addToCart('$Item', 20)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <h3>Item 4</h3>
+            <p>$25</p>
+            <button onclick="addToCart('Item 4', 25)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will appear here -->
+        </ul>
+        <p>Total: $<span id="total">0</span></p>
+    </div>
+
+    <script>
+        // Initialize an empty cart
+        let cart = [];
+
+        // Function to add items to the cart
+        function addToCart(itemName, itemPrice) {
+            // Add item to cart
+            cart.push({ name: itemName, price: itemPrice });
+
+            // Update the cart display
+            displayCart();
+        }
+
+        // Function to display cart items
+        function displayCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalContainer = document.getElementById('total');
+            
+            // Clear current cart display
+            cartItemsContainer.innerHTML = '';
+
+            let total = 0;
+            
+            // Loop through each item in the cart and create a list item
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('cart-item');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItemsContainer.appendChild(li);
+                total += item.price;
+            });
+
+            // Update total price
+            totalContainer.textContent = total;
+        }
+    </script>
+
+</body>
+</html>
